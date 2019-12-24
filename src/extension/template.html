@@ -1,0 +1,18 @@
+<div qv-extension>
+  <button ng-click='loadData()'>Load data</button>
+  <table border=1>
+    {{$scope.layout.qHyperCube}}
+    <thead>
+    <tr>
+        <th ng-repeat="dim in cube.qDimensionInfo" ng-bind="dim.qFallbackTitle"></th>
+        <th ng-repeat="mea in cube.qMeasureInfo" ng-bind="mea.qFallbackTitle"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="row in matrix">
+        <td ng-repeat="col in row" ng-bind="col.qText">
+        </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
