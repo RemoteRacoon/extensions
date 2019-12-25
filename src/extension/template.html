@@ -1,7 +1,6 @@
 <div qv-extension>
-  <button ng-click='loadData()'>Load data</button>
+  <button id='loadBtn'>Load data</button>
   <table border=1>
-    {{$scope.layout.qHyperCube}}
     <thead>
     <tr>
         <th ng-repeat="dim in cube.qDimensionInfo" ng-bind="dim.qFallbackTitle"></th>

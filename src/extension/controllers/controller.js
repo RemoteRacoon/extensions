@@ -3,23 +3,23 @@
  * Controller loading additional data pages.
  */
 class Controller {
-  constructor($scope) {
+  constructor($scope, $element) {
     $scope.cube = $scope.layout.qHyperCube;
     $scope.matrix = [];
-    $scope.loadData = () => {
-      const requestPage = {
+    this.loadBtn = document.getElementById('loadBtn');
+    $element.find('#loadBtn').on('click', () => {
+      const requestPage = [{
         qTop: $scope.matrix.length,
-        qLeft: 10,
-        qWidth: 4,
+        qLeft: 0,
+        qWidth: 3,
         qHeight: 100
-      };
+      }];
       $scope.backendApi.getData(requestPage)
         .then(data => {
           $scope.matrix.push(...data[0].qMatrix);
-        }).catch(err => console.log(err));
-    };
+        });
+    });
   }
 }
 
-Controller.$inject = ['$scope', '$element'];
 export default Controller;
