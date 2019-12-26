@@ -1,0 +1,28 @@
+{
+  "name": "qlikextensionwithanychartembedded",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "watch": "webpack",
+    "eslint": "eslint --ext .js ./"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.1.1",
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsdoc": "^17.1.1",
+    "raw-loader": "^4.0.0",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "anychart": "^8.7.1"
+  }
+}
