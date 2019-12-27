@@ -8,6 +8,7 @@ export default function ($element, layout) {
   /** @type {Array} */
   const matrix = layout.qHyperCube.qDataPages[0].qMatrix;
   const { chart } = this.$scope;
+  console.log('paint');
 
   /**
    * Matrix's number of columns.
