@@ -121,7 +121,7 @@ export default {
             },
             {
               value: 'start5',
-              label: 'rectangle'
+              label: '5-vertices star'
             },
             {
               value: 'circle',
