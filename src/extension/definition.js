@@ -11,7 +11,8 @@ export default {
           ref: 'myColor',
           type: 'integer',
           defaultValue: {
-            color: '000000'
+            color: '#ff454576',
+            index: '1'
           }
         },
         Legend: {
@@ -21,8 +22,62 @@ export default {
             ShowLegend: {
               type: 'boolean',
               label: 'Show legend',
-              ref: 'showLegend',
-              defaultValue: true
+              ref: 'legend.show',
+              defaultValue: false
+            },
+            Position: {
+              type: 'string',
+              label: 'Position:',
+              ref: 'legend.position',
+              component: 'radiobuttons',
+              options: [
+                {
+                  value: 'top',
+                  label: 'top'
+                },
+                {
+                  value: 'right',
+                  label: 'right'
+                },
+                {
+                  value: 'left',
+                  label: 'left'
+                },
+                {
+                  value: 'bottom',
+                  label: 'bottom'
+                }
+              ],
+              defaultValue: 'top'
+            },
+            Align: {
+              type: 'string',
+              label: 'Alignment',
+              ref: 'legend.alignment',
+              component: 'radiobuttons',
+              options: [
+                {
+                  value: 'top',
+                  label: 'top'
+                },
+                {
+                  value: 'right',
+                  label: 'right'
+                },
+                {
+                  value: 'left',
+                  label: 'left'
+                },
+                {
+                  value: 'bottom',
+                  label: 'bottom'
+                },
+                {
+                  value: 'center',
+                  label: 'center'
+                }
+              ],
+              defaultValue: 'top'
             }
           }
         },
@@ -34,15 +89,46 @@ export default {
               type: 'string',
               label: 'X axis title',
               ref: 'axes.x',
-              defaultValue: 'X-axis'
+              defaultValue: null
             },
             YDef: {
               type: 'string',
               label: 'Y axis title',
               ref: 'axes.y',
-              defaultValue: 'Y-axis'
+              defaultValue: 'Y axis'
             }
           }
+        },
+        XAxisTicksRotation: {
+          type: 'number',
+          component: 'slider',
+          label: 'X ticks rotation',
+          ref: 'ticks.x',
+          min: 0,
+          max: 90,
+          step: 2,
+          defaultValue: '45'
+        },
+        Markers: {
+          type: 'string',
+          label: 'Markers',
+          component: 'radiobuttons',
+          ref: 'markers.value',
+          options: [
+            {
+              value: 'star4',
+              label: 'star4'
+            },
+            {
+              value: 'start5',
+              label: 'rectangle'
+            },
+            {
+              value: 'circle',
+              label: 'circle'
+            }
+          ],
+          defaultValue: 'circle'
         }
       }
     },

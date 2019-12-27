@@ -4,7 +4,7 @@ export default {
     qMeasures: [],
     qInitialDataFetch: [
       {
-        qWidth: 2,
+        qWidth: 5,
         qHeight: 1000
       }
     ]

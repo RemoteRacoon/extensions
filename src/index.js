@@ -3,7 +3,8 @@ import {
   template,
   definition,
   controller,
-  paint
+  paint,
+  resize
 } from './extension';
 
 export default {
@@ -11,5 +12,6 @@ export default {
   template,
   definition,
   controller,
-  paint
+  paint,
+  resize
 };
