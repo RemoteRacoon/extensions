@@ -5,16 +5,6 @@ export default {
     settings: {
       uses: 'settings',
       items: {
-        MyColorPicker: {
-          label: 'My color-picker',
-          component: 'color-picker',
-          ref: 'myColor',
-          type: 'integer',
-          defaultValue: {
-            color: '#ff454576',
-            index: '1'
-          }
-        },
         Legend: {
           type: 'items',
           label: 'Legend',
@@ -129,6 +119,22 @@ export default {
             }
           ],
           defaultValue: 'circle'
+        },
+        Grid: {
+          type: 'boolean',
+          component: 'switch',
+          label: 'Grid',
+          ref: 'grid.show',
+          options: [
+            {
+              value: true,
+              label: 'On'
+            },
+            {
+              value: false,
+              label: 'Off'
+            }
+          ]
         }
       }
     },

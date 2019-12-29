@@ -27,6 +27,8 @@ class LineChart {
     this.draw = () => {
       this._chart.draw();
     };
+
+
     /**
      * Invalidate layout and change LineChart configuration if necessary.
      * Changes may be caused by changing Properties panel.
@@ -57,6 +59,7 @@ class LineChart {
       this.setYTitle();
 
       this.setLegend();
+      this.setGrid();
     };
 
 
@@ -125,6 +128,11 @@ class LineChart {
       this._chart.legend().position(this._layout.legend.position);
       this._chart.legend().align(this._layout.legend.alignment);
     };
+
+    this.setGrid = () => {
+      this._chart.xGrid().enabled(this._layout.grid.show);
+      this._chart.yGrid().enabled(this._layout.grid.show);
+    }
   }
 }
 
