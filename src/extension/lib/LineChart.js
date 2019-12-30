@@ -5,10 +5,6 @@ import DataSet from './DataSet';
  * are described through Chart singletone api.
  */
 class LineChart {
-  /**
-   * Create LineChart instance.
-   * @param {Object} layout - Default View layout.
-   */
   constructor() {
     // Pointer to layout.
     this._layout = null;
@@ -67,6 +63,7 @@ class LineChart {
      * Derive and process data from qMatrix for dataset.
      * @param {Object} matrix - The qMatrix.
      * @returns {Array}
+     * Return array with data.
      */
     this.processData = matrix => {
       const data = matrix.map(entry => {

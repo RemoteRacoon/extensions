@@ -2,18 +2,16 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
-const username = 'litvi';
-const destinationFolder = 'AnyChart';
 const qext = 'any-ext.qext';
 const outputFile = 'any-ext.js';
-const outputPath = path.resolve(`C:\\Users\\${username}\\Qlik\\Sense\\Extensions\\${destinationFolder}`);
+const outputPath = 'dist';
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/'),
   watch: false,
   output: {
     filename: outputFile,
-    path: outputPath,
+    path: path.resolve(__dirname, outputPath),
     libraryTarget: 'amd'
   },
   module: {
@@ -36,7 +34,7 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      { from: path.resolve(__dirname, `src/${qext}`), to: outputPath }
+      { from: path.resolve(__dirname, `src/${qext}`) }
     ])
 
   ]
