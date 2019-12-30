@@ -11,4 +11,6 @@ class Controller {
   }
 }
 
+Controller.$inject = ['$scope'];
+
 export default Controller;

@@ -10,8 +10,7 @@ const outputPath = path.resolve(`C:\\Users\\${username}\\Qlik\\Sense\\Extensions
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/'),
-  watch: true,
-  mode: 'development',
+  watch: false,
   output: {
     filename: outputFile,
     path: outputPath,

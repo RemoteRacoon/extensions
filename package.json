@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "watch": "webpack",
+    "build": "webpack",
     "eslint": "eslint --ext .js ./"
   },
   "author": "",

@@ -132,7 +132,7 @@ class LineChart {
     this.setGrid = () => {
       this._chart.xGrid().enabled(this._layout.grid.show);
       this._chart.yGrid().enabled(this._layout.grid.show);
-    }
+    };
   }
 }
 
